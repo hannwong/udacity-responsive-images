@@ -33,6 +33,17 @@ module.exports = function(grunt) {
       }
     },
 
+    imageoptim: {
+      dev: {
+        options: {
+          jpegMini: false,
+          imageAlpha: false,
+          quitAfter: true
+        },
+        src: ['images']
+      }
+    },
+
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
@@ -66,6 +77,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
+  grunt.loadNpmTasks('grunt-imageoptim');
   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  grunt.registerTask('optim-img', ['imageoptim']);
 
 };

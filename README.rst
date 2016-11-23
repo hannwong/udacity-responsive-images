@@ -8,6 +8,8 @@ All other packages can be installed locally. (In fact, ``grunt`` *has* to be loc
 
 Install *ImageMagick* (``brew install ImageMagick`` on Mac). Currently using version 6.9.6-5.
 
+Install *ImageOptim* (``brew install Caskroom/cask/imageoptim`` on Mac). Currently using version 1.6.2.
+
 
 Warnings to Ignore
 ==================
