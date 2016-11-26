@@ -13,15 +13,34 @@ I've left some boilerplate below for you.
 */
 
 body {
+  /*
+   * Remove "noisy" serifs.
+   * Computer screens only have at most 300dpi, unlike 1000dpi for print.
+   * See http://www.webdesignerdepot.com/2013/03/serif-vs-sans-the-final-battle/
+   */
+  font-family: sans-serif;
 
+  margin: 2em; /* Get some margin, breathing room. */
 }
 
-article {
+/*
+ * Align and center footer and article within body.
+ */
+article, footer {
+  margin: 0 auto;
   width: 50em;
 }
 
+/*
+ * Margins:
+ *  Excactly 1 line height under h1.
+ *  Center with auto horizontal margins.
+ *  No margin on left. Flush with left of article.
+ * Set width to 25em, equivalent to article's. h1 have default font-size of 2em.
+ */
 h1 {
-
+  margin: 0 auto 1em auto;
+  width: 25em; /* Udacity codes wrongly hardcodes this to 800px. */
 }
 
 img {
