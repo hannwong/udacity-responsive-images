@@ -28,7 +28,11 @@ body {
  */
 article, footer {
   margin: 0 auto;
-  width: 50em;
+  max-width: 50em;
+}
+
+footer {
+  border-top: 1px solid #ddd;
 }
 
 /*
