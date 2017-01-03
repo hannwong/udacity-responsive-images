@@ -1,5 +1,5 @@
 /*
- After you have changed the settings under responsive_images
+ After you have changed the settings at "Your code goes here",
  run this with one of these options:
   "grunt" alone creates a new, completed images directory
   "grunt clean" removes the images directory
@@ -14,9 +14,8 @@ module.exports = function(grunt) {
         options: {
           engine: 'im',
           sizes: [{
-            /* Change these */
-            width: 1600,
-            suffix: '_large_2x',
+            width: 1600, /* 50em for font-size 16px is 800px. 2x display.*/
+            suffix: "_large_2x",
             quality: 30
           }]
         },
@@ -31,6 +30,17 @@ module.exports = function(grunt) {
           cwd: 'images_src/',
           dest: 'images/'
         }]
+      }
+    },
+
+    imageoptim: {
+      dev: {
+        options: {
+          jpegMini: false,
+          imageAlpha: false,
+          quitAfter: true
+        },
+        src: ['images']
       }
     },
 
@@ -50,12 +60,25 @@ module.exports = function(grunt) {
       },
     },
 
+    /* Copy the "fixed" images that don't go through processing into the images/directory */
+    copy: {
+      dev: {
+        files: [{
+          expand: true,
+          cwd: 'images_src', /* Corrects Udacity code, avoids nested folder. */
+          src: 'fixed/*.{gif,jpg,png}',
+          dest: 'images/'
+        }]
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
-  grunt.registerTask('default', ['clean', 'mkdir', 'responsive_images']);
+  grunt.loadNpmTasks('grunt-imageoptim');
+  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  grunt.registerTask('optim-img', ['imageoptim']);
 
 };
