@@ -56,10 +56,19 @@ img {
   max-width: 100%; /* Fit images within document width. */
 }
 
+/*
+ * Reduces left-right margins of figures.
+ * Don't remove like official solution does.
+ * Those margins still useful to let text stand out and flow better.
+ */
 figure {
-  margin: 1em 0 1em 0;
+  margin: 1em 1em;
 }
 
+/*
+ * Figure captions to be different color from text, distinguished.
+ * Captions to have breathing room above and below, but left-flush with figure.
+ */
 figcaption {
   color: #bb021e;
   padding: 1em 0;
