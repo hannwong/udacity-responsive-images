@@ -74,6 +74,46 @@ figcaption {
   padding: 1em 0;
 }
 
+/*
+ * Evenly space out all social share links.
+ * Center each share link in its assigned space.
+ */
+div#social {
+  display: flex;
+}
+
+a[class*="zocial-"] {
+  margin: auto;
+}
+
+/*
+ * Use zocial icons. Black.
+ * (Applying only to <a> elements, more specific than Udacity's codes.)
+ */
+a[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif; /* Bare minimum to use zocial icons. */
+  color: black;
+
+  display: inline-block; /* Icons not part of link. Also to apply width. */
+  width: 2em;
+
+  text-shadow: 3px 3px 3px #aaa;
+}
+
+/*
+ * On hover over link, change color of zocial icon.
+ * (Udacity's CSS selector is wrong here.)
+ */
+a[class*="zocial-"]:hover:before {
+  color: #3d85c6;
+}
+
+div.github {
+  margin: 1em 0; /* Add vertical space away from social share links. */
+  text-align: center; /* Center GitHub link. */
+}
+
+
 svg#logo {
   fill: #666;
   height: 6vw;
@@ -87,26 +127,3 @@ header:hover svg#logo {
   filter: drop-shadow(3px 3px 3px #ddd);
 }
 
-[class*="zocial-"]:before {
-  color: black;
-  display: inline-block;
-  font-family: 'zocial', sans-serif;
-  text-shadow: 3px 3px 3px #aaa;
-  width: 2em;
-}
-
-a:hover [class*="zocial-"]:before {
-  color: #3d85c6;
-}
-
-div#social a {
-  margin: 0 1em 0 0;
-}
-
-div#social a:last-of-type {
-  margin: 0;
-}
-
-div#social {
-  line-height: 2em;
-}
