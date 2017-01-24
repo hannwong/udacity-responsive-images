@@ -26,7 +26,7 @@ body {
 /*
  * Align and center footer and article within body.
  */
-article, footer {
+article, footer, header {
   margin: 0 auto;
   max-width: 50em;
 }
@@ -73,7 +73,7 @@ figcaption {
  * Evenly space out all social share links.
  * Center each share link in its assigned space.
  */
-div#social {
+div.social {
   display: flex;
 }
 
@@ -114,12 +114,26 @@ div.github {
  */
 svg#logo {
   fill: #666;
-  height: 1.5em;
-  width: 1.5em;
+  height: 12vh;
+  width: 12vw;
   vertical-align: bottom;
 }
 
 svg#logo:hover {
   fill: #3d85c6;
   filter: drop-shadow(3px 3px 3px #ddd);
+}
+
+/*
+ *
+ */
+header {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+  margin-bottom: 1em;
+  text-align: center;
 }
