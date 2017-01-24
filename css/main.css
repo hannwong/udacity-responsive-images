@@ -107,3 +107,19 @@ div.github {
   margin: 1em 0; /* Add vertical space away from social share links. */
   text-align: center; /* Center GitHub link. */
 }
+
+/*
+ * Gray logo, colors light blue upon hover and adds shadow.
+ * Flush with bottom of h1.
+ */
+svg#logo {
+  fill: #666;
+  height: 1.5em;
+  width: 1.5em;
+  vertical-align: bottom;
+}
+
+svg#logo:hover {
+  fill: #3d85c6;
+  filter: drop-shadow(3px 3px 3px #ddd);
+}
