@@ -73,7 +73,7 @@ figcaption {
  * Evenly space out all social share links.
  * Center each share link in its assigned space.
  */
-div.social {
+div#social {
   display: flex;
 }
 
@@ -131,9 +131,5 @@ header {
   padding-bottom: 1em;
   margin-bottom: 1em;
   border-bottom: 1px solid #ddd;
-}
-
-header .logo {
-  margin-bottom: 1em;
   text-align: center;
 }
