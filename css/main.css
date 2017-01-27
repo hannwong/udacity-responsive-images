@@ -1,9 +1,10 @@
-[class*="zocial-"]:before {
-  color: black;
-  display: inline-block;
-  font-family: 'zocial', sans-serif;
-  text-shadow: 3px 3px 3px #aaa;
-  width: 2em;
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin: 3vh 0 3vh 0;
+  text-align: center;
 }
 
 a:hover [class*="zocial-"]:before {
@@ -28,49 +29,12 @@ a#viewSource {
   padding: 1em 0 0 0;
 }
 
-div#social a {
-  margin: 0 1em 0 0;
-}
-
-div#social a:last-of-type {
-  margin: 0;
-}
-
-h1 a {
-  font-weight: 300;
-  white-space: nowrap;
-}
-
 article {
   align-items: center;
   display: flex;
   flex-direction: column;
   max-width: 50em;
   border-bottom: 1px solid #ddd;
-}
-
-body {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-  margin: 3vh 0 3vh 0;
-  text-align: center;
-}
-
-div#social {
-  line-height: 2em;
-}
-
-figcaption {
-  color: #bb021e;
-  font-family: 'Roboto condensed', sans-serif;
-  padding: 2em 0;
-  text-align: center;
-}
-
-figure {
-  margin: 1em 0 1em 0;
 }
 
 footer {
@@ -89,13 +53,9 @@ header:hover h1 {
   color: #3d85c6;
 }
 
-h2 {
-  border-bottom: 1px solid #ddd;
-  color: #bb021e;
-  font-family: 'Roboto condensed', sans-serif;
-  font-size: 5vw;
-  margin: 0 0 1em 0;
-  padding: 0 0 1em 0;
+h1 a {
+  font-weight: 300;
+  white-space: nowrap;
 }
 
 img {
@@ -107,6 +67,46 @@ picture#banner img {
   margin: 0 0 2em 0;
   max-width: 100vw;
   width: 100vw;
+}
+
+figure {
+  margin: 1em 0 1em 0;
+}
+
+figcaption {
+  color: #bb021e;
+  font-family: 'Roboto condensed', sans-serif;
+  padding: 2em 0;
+  text-align: center;
+}
+
+div#social {
+  line-height: 2em;
+}
+
+div#social a {
+  margin: 0 1em 0 0;
+}
+
+div#social a:last-of-type {
+  margin: 0;
+}
+
+[class*="zocial-"]:before {
+  color: black;
+  display: inline-block;
+  font-family: 'zocial', sans-serif;
+  text-shadow: 3px 3px 3px #aaa;
+  width: 2em;
+}
+
+h2 {
+  border-bottom: 1px solid #ddd;
+  color: #bb021e;
+  font-family: 'Roboto condensed', sans-serif;
+  font-size: 5vw;
+  margin: 0 0 1em 0;
+  padding: 0 0 1em 0;
 }
 
 p {
