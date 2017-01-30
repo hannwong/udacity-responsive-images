@@ -75,7 +75,39 @@ module.exports = function(grunt) {
             ' images_src/postcard.jpg images/postcard_medium.jpg');
           commands.push(command +
             resize_small +
-            ' images_src/postcard.jpg images/postcard_small.jpg');
+            'images_src/postcard.jpg images/postcard_small.jpg');
+
+          // grasshopper.jpg is cropped with art direction.
+          // The original's color is lighter. Maybe Udacity misplaced the
+          //  real original.
+          commands.push(command +
+            '-crop 1944x1458+0+425 ' +
+            resize_medium +
+            'images_src/grasshopper.jpg images/grasshopper_medium.jpg');
+          commands.push(command +
+            '-crop 1332x999+0+450 ' +
+            resize_small +
+            'images_src/grasshopper.jpg images/grasshopper_small.jpg');
+
+          // sfo.jpg is cropped with art direction.
+          commands.push(command +
+            '-crop 2572x1929+0+0 ' +
+            resize_medium +
+            'images_src/sfo.jpg images/sfo_medium.jpg');
+          commands.push(command +
+            '-crop 1588x1191+0+0 ' +
+            resize_small +
+            'images_src/sfo.jpg images/sfo_small.jpg');
+
+          // rosella.jpg is cropped with art direction.
+          commands.push(command +
+            '-crop 1804x1353+115+526 ' +
+            resize_medium +
+            'images_src/rosella.jpg images/rosella_medium.jpg');
+          commands.push(command +
+            '-crop 1268x951+545+592 ' +
+            resize_small +
+            'images_src/rosella.jpg images/rosella_small.jpg');
 
           return commands.join(' && ');
         }
