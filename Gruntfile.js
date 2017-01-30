@@ -22,58 +22,52 @@ module.exports = function(grunt) {
           //   these files exist in their official solution's 'images' folder.
 
           var command = 'gm convert ';
-          var combined = 'mkdir images images_precrop && ';
+
+          var commands = [];
+          commands.push('mkdir images images_precrop');
 
           // For images to be resized proportionately, place as-is into
           //   'images_precrop' and leave to task responsive_images:resize.
 
           // volt.jpg is resized proportionately.
-          combined +=
-            'cp images_src/volt.jpg images_precrop/volt.jpg && ';
+          commands.push('cp images_src/volt.jpg images_precrop/volt.jpg');
 
           // postcard.jpg is resized proportionately.
           // Udacity made a mistake with small version.
           // Also, large version (not pixel density version) is not in use.
-          combined +=
-            'cp images_src/postcard.jpg images_precrop/postcard.jpg && ';
+          commands.push('cp images_src/postcard.jpg ' +
+                        '   images_precrop/postcard.jpg');
 
           // For images to be cropped with art direction, crop then leave
           //   directly in 'images'. (Note: still_life.jpg is a hybrid case.)
 
           // still_life.jpg is cropped to remove white space, but will still be
           //   resized proportionately thereafter for small version.
-          combined +=
-            command +
+          commands.push(command +
             '-gravity South ' +
             '-crop 2000x1000+0+150 ' +
-            'images_src/still_life.jpg images_precrop/still_life.jpg ' +
-            '&& ';
+            'images_src/still_life.jpg images_precrop/still_life.jpg');
 
           // cockatoos.jpg is cropped with art direction.
-          combined +=
-            command +
+          commands.push(command +
             '-crop 2500x1875+490+514 ' +
             '-resize 1000x750 ' +
-            'images_src/cockatoos.jpg images/cockatoos-medium.jpg ' +
-            '&& ' +
-            command +
+            'images_src/cockatoos.jpg images/cockatoos-medium.jpg');
+          commands.push(command +
             '-crop 2400x1800+567+669 ' +
             '-resize 500x375 ' +
-            'images_src/cockatoos.jpg images/cockatoos-small.jpg ' +
-            '&& ';
+            'images_src/cockatoos.jpg images/cockatoos-small.jpg');
 
           // horses.jpg is cropped with art direction.
-          combined +=
-            command +
+          commands.push(command +
             '-crop 1000x750+317+96 ' +
-            'images_src/horses.jpg images/horses-medium.jpg ' +
-            '&& ' +
-            command +
+            'images_src/horses.jpg images/horses-medium.jpg');
+          commands.push(command +
             '-crop 550x412+505+236 ' +
             '-resize 500x375 ' +
-            'images_src/horses.jpg images/horses-small.jpg ';
+            'images_src/horses.jpg images/horses-small.jpg');
 
-          return combined;
+          return commands.join(' && ');
         }
       }
     },
