@@ -29,7 +29,6 @@ module.exports = function(grunt) {
           var resize_small = '-resize 500x375 ';
 
           var commands = [];
-          commands.push('mkdir images');
 
           // still_life.jpg is cropped to remove white space, but will still be
           //   resized proportionately thereafter for small version.
@@ -187,7 +186,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-exec');
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  grunt.registerTask('art-direct', ['exec:art_direct']);
+  grunt.registerTask('default',
+    ['clean', 'mkdir', 'copy', 'responsive_images', 'art-direct']);
   grunt.registerTask('optim-img', ['imageoptim']);
-  grunt.registerTask('art-direct', ['clean', 'exec:art_direct']);
 };
