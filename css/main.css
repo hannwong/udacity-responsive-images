@@ -20,19 +20,41 @@ body {
    */
   font-family: sans-serif;
 
-  margin: 2em; /* Get some margin, breathing room. */
+  /* Breathing room top and bottom. */
+  /* No margin left-right. We want banner to span width, borderless. */
+  margin: 3vh 0px;
+
+  /* Use flex to centrally align content (article, header, footer, etc). */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center; /* center all titles. */
 }
 
 /*
  * Align and center footer and article within body.
  */
 article, footer, header {
-  margin: 0 auto;
   max-width: 50em;
+}
+
+/*
+ * Article must be flex, centrally align content, so banner can protrude to span
+ *  whole width of viewport.
+ */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer {
   border-top: 1px solid #ddd;
+}
+
+p {
+  text-align: justify;
 }
 
 /*
@@ -49,6 +71,14 @@ h1 {
 
 img {
   max-width: 100%; /* Fit images within document width. */
+}
+
+picture#banner img {
+  -webkit-filter: saturate(3) opacity(0.7);
+  margin: 0 0 2em 0; /* some margin below before text starts. */
+
+  max-width: 100vw; /* TODO: Find out why max-width is needed here. */
+  width: 100vw; /* Needed to force larger than natural resolution. */
 }
 
 /*
