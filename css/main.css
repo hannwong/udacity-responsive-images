@@ -1,10 +1,35 @@
+/*
+
+Your styles go here!
+
+Hint! You'll probably want to start by styling:
+  * <body>
+  * <article>
+  * <h1>
+  * <img>
+
+I've left some boilerplate below for you.
+
+*/
+
 body {
-  align-items: center;
+  /*
+   * Remove "noisy" serifs.
+   * Computer screens only have at most 300dpi, unlike 1000dpi for print.
+   * See http://www.webdesignerdepot.com/2013/03/serif-vs-sans-the-final-battle/
+   */
+  font-family: 'Roboto', sans-serif;
+
+  /* Breathing room top and bottom. */
+  /* No margin left-right. We want banner to span width, borderless. */
+  margin: 3vh 0px;
+
+  /* Use flex to centrally align content (article, header, footer, etc). */
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-  margin: 3vh 0 3vh 0;
-  text-align: center;
+  align-items: center;
+
+  text-align: center; /* center all titles. */
 }
 
 a:hover [class*="zocial-"]:before {
@@ -29,16 +54,52 @@ a#viewSource {
   padding: 1em 0 0 0;
 }
 
+/*
+ * Article must be flex, centrally align content, so banner can protrude to span
+ *  whole width of viewport.
+ */
 article {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  max-width: 50em;
-  border-bottom: 1px solid #ddd;
+  align-items: center;
 }
 
 footer {
-  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+p {
+  color: #444;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.6em;
+  margin: 0 auto 1em auto;
+  text-align: justify;
+}
+
+p.borderBelow {
+  border-bottom: 1px solid #eee;
+  padding: 0 0 1em 0;
+}
+
+section p:last-of-type {
+  margin: 0;
+}
+
+section {
+  border-bottom: 1px solid #eee;
+  margin: 0 0 3vh 0;
+}
+
+section:last-of-type {
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 2em 0;
+  padding: 0 0 2em 0;
+}
+
+section#post {
+  max-width: 50em;
+  width: 90vw;
 }
 
 h1 {
@@ -107,40 +168,6 @@ h2 {
   font-size: 5vw;
   margin: 0 0 1em 0;
   padding: 0 0 1em 0;
-}
-
-p {
-  color: #444;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.6em;
-  margin: 0 auto 1em auto;
-  text-align: justify;
-}
-
-p.borderBelow {
-  border-bottom: 1px solid #eee;
-  padding: 0 0 1em 0;
-}
-
-section p:last-of-type {
-  margin: 0;
-}
-
-section {
-  border-bottom: 1px solid #eee;
-  margin: 0 0 3vh 0;
-}
-
-section:last-of-type {
-  border-bottom: 1px solid #ccc;
-  margin: 0 0 2em 0;
-  padding: 0 0 2em 0;
-}
-
-section#post {
-  max-width: 50em;
-  width: 90vw;
 }
 
 svg#logo {
