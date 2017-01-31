@@ -45,11 +45,11 @@ module.exports = function(grunt) {
           // horses.jpg is cropped with art direction.
           commands.push(command +
             '-crop 1000x750+317+96 ' +
-            'images_src/horses.jpg images/horses-medium.jpg');
+            'images_src/horses.jpg images/horses_medium.jpg');
           commands.push(command +
             '-crop 550x412+505+236 ' +
             '-resize 500x375 ' +
-            'images_src/horses.jpg images/horses-small.jpg');
+            'images_src/horses.jpg images/horses_small.jpg');
 
           // volt.jpg is resized proportionately.
           commands.push(command +
@@ -61,11 +61,11 @@ module.exports = function(grunt) {
           commands.push(command +
             '-crop 2500x1875+490+514 ' +
             resize_medium +
-            'images_src/cockatoos.jpg images/cockatoos-medium.jpg');
+            'images_src/cockatoos.jpg images/cockatoos_medium.jpg');
           commands.push(command +
             '-crop 2370x1800+567+669 ' +
             resize_small +
-            'images_src/cockatoos.jpg images/cockatoos-small.jpg');
+            'images_src/cockatoos.jpg images/cockatoos_small.jpg');
 
           // postcard.jpg is resized proportionately.
           // Udacity made a mistake with small version.
