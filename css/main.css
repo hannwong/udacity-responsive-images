@@ -69,7 +69,7 @@ h1 {
 }
 
 img {
-  max-width: 100%; /* Fit images within document width. */
+  max-width: 100%; /* Fit images within container (article) width. */
 }
 
 picture#banner img {
