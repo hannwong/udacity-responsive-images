@@ -39,6 +39,13 @@ article, footer, header {
   max-width: 50em;
 }
 
+header {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
 /*
  * Article must be flex, centrally align content, so banner can protrude to span
  *  whole width of viewport.
@@ -148,14 +155,4 @@ svg#logo {
 svg#logo:hover {
   fill: #3d85c6;
   filter: drop-shadow(3px 3px 3px #ddd);
-}
-
-/*
- *
- */
-header {
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
 }
