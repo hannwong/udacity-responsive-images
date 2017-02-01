@@ -107,7 +107,7 @@ h1 {
   font-family: 'Roboto condensed', sans-serif;
   font-size: 6vw;
   font-weight: 500;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em; /* Excactly 1 line height under h1. */
 }
 
 header:hover h1 {
@@ -131,10 +131,15 @@ picture#banner img {
   width: 100vw; /* Needed to force larger than natural resolution. */
 }
 
+/* Figure to be flush with article. Article is centered and justified. */
 figure {
-  margin: 1em 0 1em 0;
+  margin: 1em 0;
 }
 
+/*
+ * Figure captions to be different color from text, distinguished.
+ * Captions to have breathing room above and below.
+ */
 figcaption {
   color: #bb021e;
   font-family: 'Roboto condensed', sans-serif;
