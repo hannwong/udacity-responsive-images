@@ -64,16 +64,8 @@ p {
   text-align: justify;
 }
 
-/*
- * Margins:
- *  Excactly 1 line height under h1.
- *  Center with auto horizontal margins.
- *  No margin on left. Flush with left of article.
- * Set width to 25em, equivalent to article's. h1 have default font-size of 2em.
- */
 h1 {
-  margin: 0 auto 1em auto;
-  width: 25em; /* Udacity codes wrongly hardcodes this to 800px. */
+  margin-bottom: 1em; /* Excactly 1 line height under h1. */
 }
 
 img {
