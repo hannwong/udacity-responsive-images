@@ -32,13 +32,6 @@ body {
   text-align: center; /* center all titles. */
 }
 
-/*
- * Align and center footer and article within body.
- */
-article, footer, header {
-  max-width: 50em;
-}
-
 header {
   padding-bottom: 1em;
   margin-bottom: 1em;
