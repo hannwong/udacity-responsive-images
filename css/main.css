@@ -94,16 +94,12 @@ figcaption {
   padding: 2em 0;
 }
 
-/*
- * Evenly space out all social share links.
- * Center each share link in its assigned space.
- */
 div#social {
-  display: flex;
+  line-height: 2em; /* Breathing room above and below. Above GitHub link. */
 }
 
-a[class*="zocial-"] {
-  margin: auto;
+div#social a {
+  margin: 0 1em; /* Each link has same amount of left-right spacing. */
 }
 
 /*
@@ -126,11 +122,6 @@ a[class*="zocial-"]:before {
  */
 a[class*="zocial-"]:hover:before {
   color: #3d85c6;
-}
-
-div.github {
-  margin: 1em 0; /* Add vertical space away from social share links. */
-  text-align: center; /* Center GitHub link. */
 }
 
 /*
