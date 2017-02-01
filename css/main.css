@@ -91,8 +91,17 @@ div#social {
   line-height: 2em; /* Breathing room above and below. Above GitHub link. */
 }
 
+/*
+ * Each link has same amount of spacing between them.
+ * No whitespace at leftmost and rightmost edges.
+ */
 div#social a {
-  margin: 0 1em; /* Each link has same amount of left-right spacing. */
+  margin: 0 1em 0 0;
+}
+
+/* And this is how to round off the above effect. */
+div#social a:last-of-type {
+  margin-right: 0;
 }
 
 /*
