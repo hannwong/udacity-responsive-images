@@ -81,22 +81,18 @@ picture#banner img {
   width: 100vw; /* Needed to force larger than natural resolution. */
 }
 
-/*
- * Reduces left-right margins of figures.
- * Don't remove like official solution does.
- * Those margins still useful to let text stand out and flow better.
- */
+/* Figure to be flush with article. Article is centered and justified. */
 figure {
-  margin: 1em 1em;
+  margin: 1em 0;
 }
 
 /*
  * Figure captions to be different color from text, distinguished.
- * Captions to have breathing room above and below, but left-flush with figure.
+ * Captions to have breathing room above and below.
  */
 figcaption {
   color: #bb021e;
-  padding: 1em 0;
+  padding: 2em 0;
 }
 
 /*
