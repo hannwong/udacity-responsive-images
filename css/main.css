@@ -32,10 +32,6 @@ body {
   text-align: center; /* center all titles. */
 }
 
-a:hover [class*="zocial-"]:before {
-  color: #3d85c6;
-}
-
 a {
   color: #4183C4;
   font-weight: 300;
@@ -114,13 +110,8 @@ header:hover h1 {
   color: #3d85c6;
 }
 
-h1 a {
-  font-weight: 300;
-  white-space: nowrap;
-}
-
 img {
-  max-width: 100%;
+  max-width: 100%; /* Fit images within container (article) width. */
 }
 
 picture#banner img {
@@ -147,23 +138,33 @@ figcaption {
 }
 
 div#social {
-  line-height: 2em;
+  line-height: 2em; /* Breathing room above and below. Above GitHub link. */
 }
 
 div#social a {
-  margin: 0 1em 0 0;
+  margin: 0 1em; /* Each link has same amount of left-right spacing. */
 }
 
-div#social a:last-of-type {
-  margin: 0;
-}
-
-[class*="zocial-"]:before {
+/*
+ * Use zocial icons. Black.
+ * (Applying only to <a> elements, more specific than Udacity's codes.)
+ */
+a[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif; /* Bare minimum to use zocial icons. */
   color: black;
-  display: inline-block;
-  font-family: 'zocial', sans-serif;
-  text-shadow: 3px 3px 3px #aaa;
+
+  display: inline-block; /* Icons not part of link. Also to apply width. */
   width: 2em;
+
+  text-shadow: 3px 3px 3px #aaa;
+}
+
+/*
+ * On hover over link, change color of zocial icon.
+ * (Udacity's CSS selector is wrong here.)
+ */
+a[class*="zocial-"]:hover:before {
+  color: #3d85c6;
 }
 
 h2 {
