@@ -73,11 +73,6 @@ p {
   text-align: justify;
 }
 
-p.borderBelow {
-  border-bottom: 1px solid #eee;
-  padding: 0 0 1em 0;
-}
-
 section p:last-of-type {
   margin: 0;
 }
