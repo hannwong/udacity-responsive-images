@@ -32,24 +32,6 @@ body {
   text-align: center; /* center all titles. */
 }
 
-a {
-  color: #4183C4;
-  font-weight: 300;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #3d85c6;
-  text-decoration: underline;
-}
-
-a#viewSource {
-  border-top: 1px solid #ddd;
-  display: block;
-  margin: 1.3em 0 0 0;
-  padding: 1em 0 0 0;
-}
-
 /*
  * Article must be flex, centrally align content, so banner can protrude to span
  *  whole width of viewport.
@@ -62,6 +44,29 @@ article {
 
 footer {
   border-top: 1px solid #ddd;
+}
+
+/*
+ * Links to have no underline. Can be mistaken for 'text in emphasis'.
+ * Still, differentiate links from text using lighter color and weight.
+ */
+footer a {
+  color: #4183C4;
+  font-weight: 300; /* Normal is 400 */
+  text-decoration: none;
+}
+
+/* Underline when links hovered over, indicates ability to click on them. */
+footer a:hover {
+  color: #3d85c6;
+  text-decoration: underline;
+}
+
+a#viewSource {
+  display: inline-block; /* Udacity's block makes whitespace clickable.*/
+
+  /* Breathing room away from social links' bottom border. */
+  margin: 1.3em 0 0 0;
 }
 
 p {
@@ -134,6 +139,8 @@ figcaption {
 
 div#social {
   line-height: 2em; /* Breathing room above and below. Above GitHub link. */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.3em;
 }
 
 /*
