@@ -69,6 +69,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
+a#viewSource {
+  display: inline-block; /* Udacity's block makes whitespace clickable.*/
+
+  /* Breathing room away from social links' bottom border. */
+  margin: 1.3em 0 0 0;
+}
+
 p {
   text-align: justify;
 }
@@ -105,6 +112,8 @@ figcaption {
 
 div#social {
   line-height: 2em; /* Breathing room above and below. Above GitHub link. */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.3em;
 }
 
 /*
