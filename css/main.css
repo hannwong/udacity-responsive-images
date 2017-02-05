@@ -40,6 +40,9 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  max-width: 50em; /* Limit width of article to 50em. Best reading width. */
+  width: 90vw; /* In usual cases, article to be 90% of viewport width. */
 }
 
 footer {
@@ -71,6 +74,47 @@ a#viewSource {
 
 p {
   text-align: justify;
+}
+
+/* Each section ends with a bottom border. Small bottom margin. */
+section {
+  border-bottom: 1px solid #eee;
+  margin: 0 0 3vh 0;
+}
+
+/* Last section has larger bottom whitespace, signifies end of article. */
+section:last-of-type {
+  border-bottom: 1px solid #ccc; /* Has a darker bottom border than usual. */
+  margin: 0 0 6vh 0;
+  padding: 0 0 6vh 0;
+}
+
+section#references div {
+  column-count: 2;
+  column-gap: 3em;
+  column-rule: 1px dashed;
+}
+
+section#references p {
+  /* Hanging indents */
+  padding-left: 1em;
+  text-indent: -1em;
+  text-align: left;
+}
+
+/* Middle element breaks cleanly to next column. */
+section#references p:nth-child(3) {
+  break-after: column;
+}
+
+/* Single column for references if screen width too small. */
+@media (max-width: 35em) {
+  section#references div {
+    column-count: auto;
+  }
+  section#references p:nth-child(3) {
+    break-after: auto;
+  }
 }
 
 h1 {
