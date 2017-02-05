@@ -69,12 +69,22 @@ module.exports = function(grunt) {
 
           // postcard.jpg is resized proportionately.
           // Udacity made a mistake with small version.
+          crop_first = '-crop 3238x2085+0+195 ';
           commands.push(command +
-            resize_medium +
-            ' images_src/postcard.jpg images/postcard_medium.jpg');
+            crop_first +
+            '-resize 1000x644 ' +
+            'images_src/postcard.jpg images/postcard_medium.jpg');
           commands.push(command +
-            resize_small +
+            crop_first +
+            '-resize 500x322 ' +
             'images_src/postcard.jpg images/postcard_small.jpg');
+          // Also crop large versions.
+          commands.push(command +
+            '-crop 1600x1030+0+94 ' +
+            'images/postcard-1600_large_2x.jpg images/postcard-1600_large_2x.jpg');
+          commands.push(command +
+            '-crop 800x515+0+47 ' +
+            'images/postcard-800_large_1x.jpg images/postcard-800_large_1x.jpg');
 
           // grasshopper.jpg is cropped with art direction.
           // The original's color is lighter. Maybe Udacity misplaced the
