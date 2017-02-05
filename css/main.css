@@ -32,13 +32,6 @@ body {
   text-align: center; /* center all titles. */
 }
 
-header {
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
 /*
  * Article must be flex, centrally align content, so banner can protrude to span
  *  whole width of viewport.
@@ -157,9 +150,9 @@ a[class*="zocial-"]:hover:before {
  */
 svg#logo {
   fill: #666;
-  height: 12vh;
-  width: 12vw;
-  vertical-align: bottom;
+  height: 6vh;
+  width: 6vw;
+  margin: 0 auto 0.5em auto;
 }
 
 svg#logo:hover {
