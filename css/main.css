@@ -53,6 +53,22 @@ footer {
   border-top: 1px solid #ddd;
 }
 
+/*
+ * Links to have no underline. Can be mistaken for 'text in emphasis'.
+ * Still, differentiate links from text using lighter color and weight.
+ */
+footer a {
+  color: #4183C4;
+  font-weight: 300; /* Normal is 400 */
+  text-decoration: none;
+}
+
+/* Underline when links hovered over, indicates ability to click on them. */
+footer a:hover {
+  color: #3d85c6;
+  text-decoration: underline;
+}
+
 p {
   text-align: justify;
 }
