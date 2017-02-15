@@ -14,11 +14,11 @@ I've left some boilerplate below for you.
 
 body {
   /*
-   * Remove "noisy" serifs.
+   * Remove "noisy" serifs. 'Roboto' font is even slimmer, cleaner.
    * Computer screens only have at most 300dpi, unlike 1000dpi for print.
    * See http://www.webdesignerdepot.com/2013/03/serif-vs-sans-the-final-battle/
    */
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   /* Breathing room top and bottom. */
   /* No margin left-right. We want banner to span width, borderless. */
@@ -132,6 +132,8 @@ section#references p:nth-child(3) {
 }
 
 article h1 {
+  font-family: 'Roboto condensed', sans-serif;
+
   font-size: 6vw; /* Larger than normal text. Responsive to viewport width. */
 
   /* Only slightly bolder than normal text. 'bold' is 700. */
@@ -181,6 +183,7 @@ figure {
  */
 figcaption {
   color: #bb021e;
+  font-family: 'Roboto condensed', sans-serif;
   padding: 2em 0;
 }
 
@@ -231,7 +234,7 @@ a[class*="zocial-"]:hover:before {
  */
 svg#logo {
   fill: #666;
-  height: 6vh;
+  height: 6vw;
   width: 6vw;
   margin: 0 auto 0.5em auto;
 }
