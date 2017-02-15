@@ -1,3 +1,20 @@
+==========
+ Overview
+==========
+
+Throughout my commits, you'll see me make corrections and/or improvements to Udacity's codes. Hopefully, these corrections and improvements will convince you that I am more than acing Udacity's *Front-End Web Developer Nanodegree*, and you can help me get a front-end web dev job to fund my *next* Udacity Nanodegree --- Self-Driving Cars.
+
+
+=================================================================
+ Checking My Corrections/Improvements Against Udacity's Solution
+=================================================================
+
+The branches named ``solution-x-aligned`` (eg ``solution-3-aligned``) exist to guide me as I close the gap between my solution and Udacity's.
+
+Simply put, I remove/modify/add codes to Udacity's solution on these branches to make Udacity's solution look closer to my desired solution.
+
+Clears up the clutter of *differences* and helps me hone in on "*what gaps I still need to close*".
+
 =========================
  Installing Dependencies
 =========================
@@ -6,7 +23,7 @@ Install ``grunt-cli`` globally.
 
 All other packages can be installed locally. (In fact, ``grunt`` *has* to be local.)
 
-Install *ImageMagick* (``brew install ImageMagick`` on Mac). Currently using version 6.9.6-5.
+Install *GraphicsMagick* (``brew install GraphicsMagick`` on Mac). Currently using version 1.3.25.
 
 Install *ImageOptim* (``brew install Caskroom/cask/imageoptim`` on Mac). Currently using version 1.6.2.
 
