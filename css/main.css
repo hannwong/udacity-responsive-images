@@ -72,8 +72,22 @@ a#viewSource {
   margin: 1.3em 0 0 0;
 }
 
+p, h1 {
+  color: #444; /* Gray text. Lessen sharp contrast with white background. */
+}
+
 p {
+  line-height: 1.6em; /* Space lines out for better readability. */
+
+  /* No need for this in Udacity's codes. Vertical margins collapse. */
+  /* https://www.w3.org/TR/CSS2/box.html#collapsing-margins */
+  /*margin: 0 auto 1em auto;*/
+
   text-align: justify;
+}
+
+p.lead::first-letter {
+  font-size: 3em;
 }
 
 /* Each section ends with a bottom border. Small bottom margin. */
@@ -117,8 +131,31 @@ section#references p:nth-child(3) {
   }
 }
 
-h1 {
-  margin-bottom: 1em; /* Excactly 1 line height under h1. */
+article h1 {
+  font-size: 6vw; /* Larger than normal text. Responsive to viewport width. */
+
+  /* Only slightly bolder than normal text. 'bold' is 700. */
+  /* Bold is too thick to be easily readable, it seems. */
+  font-weight: 500;
+
+  margin-bottom: 1em; /* Exactly 1 line height under h1. */
+}
+
+article h1:hover{
+  color: #3d85c6; /* On hover, title changes color. */
+}
+
+section#post h2 {
+  color: #bb021e; /* Post title in red. */
+  font-size: 5vw; /* Title size responsive to viewport width. */
+
+  /* Zero top margin; banner already has bottom margin. */
+  /* Retain bottom margin. Breathing space before post text. */
+  margin: 0 0 1em 0;
+
+  /* Sort of underline post title. */
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 1em 0;
 }
 
 img {
