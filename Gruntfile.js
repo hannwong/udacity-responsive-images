@@ -21,6 +21,9 @@ module.exports = function(grunt) {
         *  with art direction. Some are a combination of both.
         * As such, it is too complicated to handle using grunt task
         *  responsive_images. Moreover, `gm' is easy enough to use.
+        * In any case, grunt-responsive-images is buggy, doesn't crop.
+        *   See my patch at:
+        *   https://github.com/andismith/grunt-responsive-images/pull/124
         */
       art_direct: {
         cmd: function() {
